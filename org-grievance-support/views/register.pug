@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Register
+  form(action="/api/auth/register", method="POST")
+    .form-group
+      label(for="name") Name
+      input(type="text", name="name", class="form-control", required)
+    .form-group
+      label(for="email") Email
+      input(type="email", name="email", class="form-control", required)
+    .form-group
+      label(for="password") Password
+      input(type="password", name="password", class="form-control", required)
+    .form-group
+      label(for="role") Role
+      select(name="role", class="form-control")
+        option(value="employee") Employee
+        option(value="hr") HR
+        option(value="admin") Admin
+    button(type="submit", class="btn btn-primary") Register
+  p 
+    | Already have an account? 
+    a(href="/login") Login

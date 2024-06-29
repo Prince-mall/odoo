@@ -1,0 +1,3 @@
+if typeof messages !== 'undefined'
+  each message in messages
+    .alert(class="alert-" + message.type)= message.text
